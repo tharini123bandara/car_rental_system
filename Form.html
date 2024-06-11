@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form-styles.css">
+</head>
+<body>
+
+    <header>
+    <div class="header-content">
+        <img src="images/logo.png" class="logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="Form.html" class="dropbtn">Vehicle Type</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Van</a>
+                        <a href="index.html">Car</a>
+                    </div>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li class="phone-item"> <img src="images/phone.png"> +94387868765</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="sliding-sentence">
+        <span>Need Assistance? Call Our 24/7 Support Line Visit Our FAQ page or Contact us Online Email us at Support@happydeals.lk </span>
+    </div>
+    </header>
+
+    <div class="form-container">
+        <!-- Form Box -->
+        <div class="form-box">
+            <h2>Enter Your Information</h2>
+            <div class="form-fields">
+                <label for="customerName">Customer Name</label>
+                <input type="text" id="customerName" name="customerName" required>
+                
+                <label for="customerPhone">Customer Phone Number</label>
+                <input type="text" id="customerPhone" name="customerPhone" required>
+                
+                <label for="pickupDate">Pickup Date</label>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+                
+                <label for="pickupTime">Pickup Time</label>
+                <input type="time" id="pickupTime" name="pickupTime" required>
+                
+                <label for="ReturnDate">Return Date</label>
+                <input type="date" id="ReturnDate" name="ReturnDate" required>
+                
+                <input type="hidden" id="carId" name="carId">
+
+                <div class="form-buttons">
+                    <button class="rent-now" onclick="submitForm()">Rent Now</button>
+                    <button class="cancel" onclick="closeForm()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car Information Box -->
+        <div class="car-info-box">
+            <h2>Car Information</h2>
+            <div class="car-info">
+                <h3 id="carName"></h3>
+                <img id="carImage" src="" alt="Car Image">
+                <div id="carDescription"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+        window.onload = function() {
+            var params = new URLSearchParams(window.location.search);
+
+            var carId = params.get('carId');
+            document.getElementById('carId').value = carId;
+            
+            // Populate car information
+            document.getElementById('carName').innerText = decodeURIComponent(params.get('carName'));
+            document.getElementById('carImage').src = decodeURIComponent(params.get('imageUrl'));
+
+            document.getElementById('carDescription').innerHTML = `
+                <p>Availability: ${decodeURIComponent(params.get('availability'))}</p>
+                <p>Maximum Persons: ${decodeURIComponent(params.get('maxPersons'))}</p>
+                <p>Fuel Efficiency: ${decodeURIComponent(params.get('fuelEfficiency'))}</p>
+                <p>Price per km: ${decodeURIComponent(params.get('pricePerKm'))}</p>
+            `;
+            
+            if (decodeURIComponent(params.get('carName')) === 'Toyota Corolla AXIO') {
+                var formDescription = document.getElementById('carDescription');
+                formDescription.innerHTML += `
+                    <p><strong>Interior Features:</strong> Air conditioning, comfortable cloth seats, spacious trunk</p>
+                    <p><strong>Delivery Options:</strong> Not Available</p>
+                `;
+            }
+        };
+        
+        function submitForm() {
+                var customerName = document.getElementById('customerName').value;
+                var customerPhone = document.getElementById('customerPhone').value;
+                var pickupDate = document.getElementById('pickupDate').value;
+                var pickupTime = document.getElementById('pickupTime').value;
+                var returnDate = document.getElementById('ReturnDate').value;
+                var carId = document.getElementById('carId').value;
+
+                // Check if any field is empty
+                if (!customerName || !customerPhone || !pickupDate || !pickupTime || !returnDate) {
+                    alert("Please fill in all fields.");
+                    return; // Exit function if any field is empty
+                }
+
+                // If all fields are filled, proceed to submit the form
+                localStorage.setItem(carId, 'Unavailable');
+                alert("Form submitted!");
+                window.location.href = 'index.html';
+            }
+
+           
+        
+
+       
+    </script>
+</body>
+</html>

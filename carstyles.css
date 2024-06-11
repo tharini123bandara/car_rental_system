@@ -1,0 +1,108 @@
+
+
+header {
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align horizontally */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: 90%; /* Make the container full width */
+    height: 300px;
+    
+}
+
+.car-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px; /* Adjust margin for spacing between boxes */
+    padding: 15px;
+    text-align: center;
+    color: black;
+    font-weight: bold; /* Set font weight to bold */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: calc(33% - 30px); /* Adjust width to fit three boxes per row with margin */
+    min-width: 300px; /* Minimum width to ensure the box doesn't shrink too much */
+    flex: 1 1 30%; /* Flex grow, shrink, and basis */
+    height: 300px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center align vertically */
+    background-size: contain; /* Ensure the background image fits within the box */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position:center;
+    position: relative;
+    overflow: hidden;
+     background-color:white;
+}
+    
+
+
+
+.car-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px 8px 0 0; /* Rounded corners only on the top */
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.car-price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 8px 8px; /* Rounded corners only on the bottom */
+    color: black;
+    text-align: left; /* Center-align the price */
+}
+
+.car-info-hidden {
+    display: none; /* Initially hidden */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle text shadow for better visibility */
+}
+
+.car-box:hover .car-info-hidden {
+    display: block;
+}
+
+.car-box button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.car-box button:hover {
+    background-color: #45a049;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+
+
+
+

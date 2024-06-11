@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="carstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Home - Car Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <img src="images/logo.png" class="logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="Form.html" class="dropbtn">Vehicle Type</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Van</a>
+                        <a href="index.html">Car</a>
+                    </div>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li class="phone-item"> <img src="images/phone.png"> +94387868765</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="sliding-sentence">
+        <span>Need Assistance? Call Our 24/7 Support Line Visit Our FAQ page or Contact us Online Email us at Support@happydeals.lk </span>
+    </div>
+    </header>
+    <main>
+        <div class="car-container">
+            <!-- Example car box, you can add more car boxes here -->
+            <div class="car-box" data-car-id="car1" style="background-image: url('https://malshanrentacar.com/wp-content/uploads/2020/05/toyota-axio-hybrid-wxb-for-rent-sri-lanka-malshan.jpg.webp')">
+                <div class="car-name">
+                    <h2>Toyota Corolla AXIO</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Toyota Corolla AXIO</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 5 persons</p>
+                    <p><i class="fa fa-gauge"></i> 20 km/l</p>
+                    <p>Price per km: Rs. 100</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 100</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car2" style="background-image: url('https://www.ccarprice.com/products/Toyota-Sienna-Limited-FWD-7-Passenger-2020.jpg'); background-size: 85%;">
+                <div class="car-name">
+                    <h2>Toyota Sienna</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Toyota Sienna</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 7 persons</p>
+                    <p><i class="fa fa-gauge"></i> 15 km/l</p>
+                    <p>Price per km: Rs. 90</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 90</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car3" style="background-image: url('https://cache2.pakwheels.com/system/car_generation_pictures/5106/original/cover-z100.jpg?1578657782'); background-size: 65%;">
+                <div class="car-name">
+                    <h2>Zotye Z100</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Zotye Z100</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 5 persons</p>
+                    <p><i class="fa fa-gauge"></i> 20 km/l</p>
+                    <p>Price per km: Rs. 90</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 90</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car4" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdFq22bNOYp4_Q7agfCCIfq4cQ88vdL7kqPxZCO384czc-YAAFIgnMoBTCCesYd64F9w&usqp=CAU'); background-size: 80%;">
+                <div class="car-name">
+                    <h2>Suzuki Spacia</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Suzuki Spacia</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 4 persons</p>
+                    <p><i class="fa fa-gauge"></i> 18 km/l</p>
+                    <p>Price per km: Rs. 90</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 60</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car5" style="background-image: url('https://cdni.autocarindia.com/ExtraImages/20220111105708_Hilux.jpg'); background-size: 85%;">
+                <div class="car-name">
+                    <h2>Toyota Hilux</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Toyota Hilux</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 5 persons</p>
+                    <p><i class="fa fa-gauge"></i> 13 km/l</p>
+                    <p>Price per km: Rs. 130</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 130</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car6" style="background-image: url('https://media.zigcdn.com/media/content/2023/Nov/655d86532e9c8.jpg?tr=w-420'); background-size: 70%;">
+                <div class="car-name">
+                    <h2>Maruti Suzuki Swift</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Maruti Suzuki Swift</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 7 persons</p>
+                    <p><i class="fa fa-gauge"></i> 25 km/l</p>
+                    <p>Price per km: Rs. 60</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 60</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car7" style="background-image: url('https://imgd.aeplcdn.com/370x208/n/e8vo5ua_1560269.jpg?q=80'); background-size: 95%;">
+                <div class="car-name">
+                    <h2>Suzuki Wagon R</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Suzuki Wagon R</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 5 persons</p>
+                    <p><i class="fa fa-gauge"></i> 25 km/l</p>
+                    <p>Price per km: Rs. 75</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 75</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car8" style="background-image: url('https://static.carfromjapan.com/spec_e5b251de-29d7-4ad3-963a-d5a05eeef691_640_0'); background-size: 75%;">
+                <div class="car-name">
+                    <h2>Toyota Ipsum</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Toyota Ipsum</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 7 persons</p>
+                    <p><i class="fa fa-gauge"></i> 22 km/l</p>
+                    <p>Price per km: Rs. 120</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 120</p>
+                </div>
+            </div>
+
+            <div class="car-box" data-car-id="car9" style="background-image: url('https://imgd.aeplcdn.com/1056x594/n/u1puesa_1463330.jpg?q=80'); background-size: 75%;">
+                <div class="car-name">
+                    <h2>Alto 800 VXI</h2>
+                </div>
+                <div class="car-info-hidden">
+                    <h2>Alto 800 VXI</h2>
+                    <p>Availability: <span>Available</span></p>
+                    <p><i class="fa fa-users"></i> Maximum 5 persons</p>
+                    <p><i class="fa fa-gauge"></i> 22 km/l</p>
+                    <p>Price per km: Rs. 70</p>
+                    <button class="rent-btn" onclick="rentOut(this)">Rent Out</button>
+                </div>
+                <div class="car-price">
+                    <p>Price per km: Rs. 70</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   <script>
+       
+       
+        // Hide and show car details on hover
+        document.querySelectorAll('.car-box').forEach(function(box) {
+            box.addEventListener('mouseenter', function() {
+                box.querySelector('.car-name').style.display = 'none';
+                box.querySelector('.car-price').style.display = 'none';
+                box.querySelector('.car-info-hidden').style.display = 'block';
+            });
+
+            box.addEventListener('mouseleave', function() {
+                box.querySelector('.car-name').style.display = 'block';
+                box.querySelector('.car-price').style.display = 'block';
+                box.querySelector('.car-info-hidden').style.display = 'none';
+            });
+        });
+
+        
+
+        // Rent out function
+        function rentOut(button) {
+            var carBox = button.closest('.car-box');
+            var carId = carBox.getAttribute('data-car-id');
+            var carName = carBox.querySelector('.car-info-hidden h2').innerText;
+            var availability = carBox.querySelector('.car-info-hidden span').innerText;
+            var maxPersons = carBox.querySelector('.car-info-hidden p:nth-child(3)').innerText;
+            var fuelEfficiency = carBox.querySelector('.car-info-hidden p:nth-child(4)').innerText;
+            var pricePerKm = carBox.querySelector('.car-info-hidden p:nth-child(5)').innerText;
+            var backgroundImage = carBox.style.backgroundImage;
+            var imageUrl = backgroundImage.replace('url("', '').replace('")', '');
+
+            var encodedCarName = encodeURIComponent(carName);
+            var encodedAvailability = encodeURIComponent(availability);
+            var encodedMaxPersons = encodeURIComponent(maxPersons);
+            var encodedFuelEfficiency = encodeURIComponent(fuelEfficiency);
+            var encodedPricePerKm = encodeURIComponent(pricePerKm);
+            var encodedImageUrl = encodeURIComponent(imageUrl);
+
+
+            
+            window.location.href = 'form.html?carName=' + encodedCarName +
+                                    '&availability=' + encodedAvailability +
+                                    '&maxPersons=' + encodedMaxPersons +
+                                    '&fuelEfficiency=' + encodedFuelEfficiency +
+                                    '&pricePerKm=' + encodedPricePerKm +
+                                    '&imageUrl=' + encodedImageUrl;
+        }
+       
+       
+       
+    </script>
+</body>
+</html>
