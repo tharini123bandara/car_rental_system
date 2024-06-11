@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Car Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <img src="images/logo.png" class="logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="vehicle_type.html" class="dropbtn">Vehicle Type</a>
+                    <div class="dropdown-content">
+                        <a href="van.html">Van</a>
+                        <a href="car.html">Car</a>
+                    </div>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li class="phone-item"> <img src="images/phone.png"> +94387868765</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="sliding-sentence">
+        <span>Need Assistance? Call Our 24/7 Support Line Visit Our FAQ page or Contact us Online Email us at Support@happydeals.lk </span>
+    </div>
+    </header>
+
+    <main>
+    <div class="main-content">
+        <div class="book-now-container">
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="text-content">
+            <h1>Wheels When You Need Them</h1>
+            <p>Best cars at the lowest rates!</p>
+        </div>
+    </div>
+    </main>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/car1.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/car2.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/car3.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/car4.jpg">
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+    <section class="why-choose-us">
+    <h2>WHY CHOOSE US?</h2>
+    <p>REASONS WHY WE ARE THE BEST CAR RENTAL COMPANY IN SRI LANKA</p>
+    <div class="features">
+        <div class="feature">
+            <img src="images/icon1.png" alt="Easy and secure online booking capability">
+            <p>Easy and secure online booking capability</p>
+        </div>
+        <div class="feature">
+            <img src="images/icon2.png" alt="Free cancellation and booking amendments">
+            <p>Free cancellation and booking amendments</p>
+        </div>
+        <div class="feature">
+            <img src="images/icon3.png" alt="24/7 customer support and breakdown assistance">
+            <p>24/7 customer support and breakdown assistance</p>
+        </div>
+        <div class="feature">
+            <img src="images/icon4.png" alt="Lowest collision damage waiver rates">
+            <p>Lowest collision damage waiver rates</p>
+        </div>
+        <div class="feature">
+            <img src="images/icon5.png" alt="Modern fleet with leading vehicle brands">
+            <p>Modern fleet with leading vehicle brands</p>
+        </div>
+        <div class="feature">
+            <img src="images/icon6.png" alt="Unbranded vehicles for added security">
+            <p>Unbranded vehicles for added security</p>
+        </div>
+        <div class="feature">
+            <img src="images/icon7.png" alt="Unlimited Mileage for complete freedom">
+            <p>Unlimited Mileage for complete freedom</p>
+        </div>
+        <div class="feature">
+            <img src="images/icon8.png" alt="Trusted positive reviews by our customers">
+            <p>Trusted positive reviews by our customers</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="about-company">
+    <H1>Welcome to Happy Deals in Thalawathugoda, </H1>
+    <p class="company-description">your premier vehicle rental company dedicated to providing top-notch services with a modern fleet of vehicles. We prioritize customer satisfaction and offer an extensive range of vehicles to meet various travel needs. Whether you need a vehicle for a short trip or an extended journey, we are here to ensure excellence and reliability in your rental experience. Let us take care of your transportation needs while you focus on enjoying your travels to the fullest.</p>
+
+    </section>
+    <footer class="site-footer">
+    <div class="footer-links">
+        <a href="privacy_policy.html">PRIVACY POLICY</a>
+        <a href="terms_of_use.html">TERMS OF USE</a>
+        <a href="careers.html">CAREERS</a>
+        <a href="site_map.html">SITE MAP</a>
+    </div>
+    <div class="footer-copyright">
+        <p>Copyright &copy; 2024 Happy Deals. All rights reserved.</p>
+    </div>
+
+    </footer>
+
+</body>
+</html>

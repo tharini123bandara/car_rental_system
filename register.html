@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <header>
+    <div class="header-content">
+        <img src="images/logo.png" class="logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="vehicle_type.html" class="dropbtn">Vehicle Type</a>
+                    <div class="dropdown-content">
+                        <a href="van.html">Van</a>
+                        <a href="car.html">Car</a>
+                    </div>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li class="phone-item"> <img src="images/phone.png"> +94387868765</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="sliding-sentence">
+        <span>Need Assistance? Call Our 24/7 Support Line Visit Our FAQ page or Contact us Online Email us at Support@happydeals.lk </span>
+    </div>
+    </header>
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="id_username">Name</label>
+                <input type="text" id="id_username" name="Username" placeholder="Please enter your name">
+
+            </div>
+            <div class="form-group password-eye">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Please enter your password">
+                <span onclick="togglePassword()">👁️</span>
+            </div>
+            <div class="password-requirements">
+                Your password must have:
+                <ul>
+                    <li>At least 8 characters, no spaces</li>
+                    <li>Upper & lowercase Latin letters</li>
+                    <li>At least one number</li>
+                </ul>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <div class="benefits">
+            <ul>
+                <li>Quick and easy booking process</li>
+                <li>Stay updated on our special offers</li>
+                <li>Exclusive discounts</li>
+            </ul>
+        </div>
+        <div class="terms">
+            By signing in or creating an account, you agree with our
+            <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var passwordEye = document.querySelector(".password-eye span");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordEye.textContent = "🙈";
+            } else {
+                passwordInput.type = "password";
+                passwordEye.textContent = "👁️";
+            }
+        }
+    </script>
+
+</body>
+</html>
